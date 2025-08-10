@@ -1,0 +1,16 @@
+python-dotenv
+openai
+langchain
+streamlit
+flask
+huggingface-hub
+torch
+transformers
+sentence-transformers
+chromadb
+faiss-cpu
+requests
+pandas
+beautifulsoup4
+black
+flake8

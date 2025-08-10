@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# FAISS index & cache
+*.faiss
+*.pkl
+cache/
+
+# Streamlit cache
+.streamlit/
+
+# Data files
+data/
+downloads/
