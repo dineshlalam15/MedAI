@@ -16,3 +16,34 @@
 - OpenAI GPT API
 - FAISS Vector Store
 - PyPDF2 / Unstructured / Chroma (optional)
+
+🏢 Code Architecture:
+MedAI/
+│
+├── app/                        # Main application code
+│   ├── __init__.py
+│   ├── config.py              # Reads from .env
+│   ├── ingestion.py           # Fetch + preprocess medical data
+│   ├── embeddings.py          # Generate embeddings
+│   ├── vectorstore.py         # Store/retrieve embeddings
+│   ├── retrieval.py           # Query + retrieve passages
+│   ├── llm.py                 # LLM query & synthesis
+│   ├── ui.py                  # Streamlit/Flask UI
+│
+├── data/                      # Raw and processed data
+│
+├── tests/                     # Unit tests
+│
+├── prompts/
+│   ├── retrieval_prompts.ini
+│   ├── summarization_prompts.ini
+│   ├── classification_prompts.ini
+│   └── system_prompts.ini
+|
+├── requirements.txt
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+├── .env
+├── .env.example
+└── .gitignore
