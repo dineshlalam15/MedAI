@@ -17,33 +17,29 @@
 - FAISS Vector Store
 - PyPDF2 / Unstructured / Chroma (optional)
 
-🏢 Code Architecture:
-MedAI/
-│
-├── app/                        # Main application code
-│   ├── __init__.py
-│   ├── config.py              # Reads from .env
-│   ├── ingestion.py           # Fetch + preprocess medical data
-│   ├── embeddings.py          # Generate embeddings
-│   ├── vectorstore.py         # Store/retrieve embeddings
-│   ├── retrieval.py           # Query + retrieve passages
-│   ├── llm.py                 # LLM query & synthesis
-│   ├── ui.py                  # Streamlit/Flask UI
-│
-├── data/                      # Raw and processed data
-│
-├── tests/                     # Unit tests
-│
-├── prompts/
-│   ├── retrieval_prompts.ini
-│   ├── summarization_prompts.ini
-│   ├── classification_prompts.ini
-│   └── system_prompts.ini
-|
-├── requirements.txt
-├── Pipfile
-├── Pipfile.lock
-├── README.md
-├── .env
-├── .env.example
-└── .gitignore
+## 🗂 Project Structure
+```
+📦 MedAI
+ ┣ 📂 app
+ ┃ ┣ 📜 __init__.py
+ ┃ ┣ ⚙ config.py         # Reads environment variables
+ ┃ ┣ 📄 ingestion.py     # Document ingestion & preprocessing
+ ┃ ┣ 🤖 embeddings.py    # Embedding generation
+ ┃ ┣ 📦 vectorstore.py   # FAISS vector DB operations
+ ┃ ┣ 🔍 retrieval.py     # Document retrieval logic
+ ┃ ┣ 🧠 llm.py           # LLM interaction
+ ┃ ┗ 🎨 ui.py            # Streamlit/Flask frontend
+ ┣ 📂 data               # Raw & processed files
+ ┣ 📂 tests              # Unit tests
+ ┣ 📂 prompts            # Prompt templates
+ ┃ ┣ retrieval_prompts.ini
+ ┃ ┣ summarization_prompts.ini
+ ┃ ┣ classification_prompts.ini
+ ┃ ┗ system_prompts.ini
+ ┣ 📜 requirements.txt
+ ┣ 📜 Pipfile
+ ┣ 📜 README.md
+ ┣ ⚙ .env
+ ┣ ⚙ .env.example
+ ┗ 📜 .gitignore
+```
